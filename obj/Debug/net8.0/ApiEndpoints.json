@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "HomeController",
+    "Method": "GetCurrentTime",
+    "RelativePath": "Home/now",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
