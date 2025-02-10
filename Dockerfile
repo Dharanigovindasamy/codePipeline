@@ -1,14 +1,14 @@
 ﻿# Install the SSM Agent
-RUN apt-get update && apt-get install -y \
-    amazon-ssm-agent \
-    && mkdir -p /var/lib/amazon/ssm \
-    && systemctl enable amazon-ssm-agent
+#RUN apt-get update && apt-get install -y \
+ #   amazon-ssm-agent \
+  #  && mkdir -p /var/lib/amazon/ssm \
+   # && systemctl enable amazon-ssm-agent
 
 # Copy the necessary session manager plugin
-RUN mkdir -p /usr/local/sessionmanager && \
-    curl https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb -o session-manager-plugin.deb && \
-    dpkg -i session-manager-plugin.deb && \
-    rm session-manager-plugin.deb
+#RUN mkdir -p /usr/local/sessionmanager && \
+ #   curl https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb -o session-manager-plugin.deb && \
+  #  dpkg -i session-manager-plugin.deb && \
+   # rm session-manager-plugin.deb
 
 
 
