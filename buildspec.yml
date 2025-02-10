@@ -2,7 +2,6 @@ version: 0.2
 
 env:
   variables:
-    APPLICATION_NAME: "ecs-fargate"
     ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
     DOTNET_VERSION: "8.0"
 
@@ -20,8 +19,8 @@ phases:
   pre_build:
     commands:
       - echo "Pre-build started on $(date)"
-      - dotnet nuget locals all --clear  # Clear NuGet cache
-      - dotnet restore ecs-fargate.sln   # Restore dependencies using the solution file
+      - dotnet nuget locals all --clear  
+      - dotnet restore ecs-fargate.sln   
 
   build:
     commands:

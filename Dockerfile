@@ -1,4 +1,18 @@
-﻿# Use the official .NET SDK image as a build environment
+﻿# Install the SSM Agent
+RUN apt-get update && apt-get install -y \
+    amazon-ssm-agent \
+    && mkdir -p /var/lib/amazon/ssm \
+    && systemctl enable amazon-ssm-agent
+
+# Copy the necessary session manager plugin
+RUN mkdir -p /usr/local/sessionmanager && \
+    curl https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb -o session-manager-plugin.deb && \
+    dpkg -i session-manager-plugin.deb && \
+    rm session-manager-plugin.deb
+
+
+
+# Use the official .NET SDK image as a build environment
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-env
 WORKDIR /app
 
