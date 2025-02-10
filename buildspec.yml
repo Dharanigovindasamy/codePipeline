@@ -1,52 +1,26 @@
 version: 0.2
 
-env:
-  variables:
-    ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
-    DOTNET_VERSION: "8.0"
-
 phases:
-  install:
-    runtime-versions:
-      dotnet: 8.0
-      nodejs: 14
-    commands:
-      - echo "Verifying installed .NET SDK and Docker versions..."
-      - dotnet --version
-      - docker --version
-      - echo "Environment setup complete."
-
   pre_build:
     commands:
-      - echo "Pre-build started on $(date)"
-      - dotnet nuget locals all --clear  
-      - dotnet restore ecs-fargate.sln   
-
+      - echo "Logging into AWS ECR..."
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 640168412115.dkr.ecr.us-east-1.amazonaws.com
   build:
     commands:
-      - echo "Building .NET application..."
-      - dotnet build ecs-fargate.sln --configuration Release
-      - echo "Publishing .NET application..."
-      - dotnet publish ecs-fargate.csproj --configuration Release --output publish_output
-
-      - echo "Building Docker image..."
-      - docker build -t $ECR_REPO:latest -f Dockerfile .
-
-      - echo "Tagging Docker image..."
-      - docker tag $ECR_REPO:latest $ECR_REPO:latest
-
+      - echo "Pulling the latest Docker image..."
+      - docker pull 640168412115.dkr.ecr.us-east-1.amazonaws.com/ecr-rds-repository:latest1
+      - echo "Creating a container from the image..."
+      - CONTAINER_ID=$(docker create 640168412115.dkr.ecr.us-east-1.amazonaws.com/ecr-rds-repository:latest1)
+      - echo "Copying files from the container..."
+      - docker cp $CONTAINER_ID:/var/www/app ./app-output  # Change this path accordingly
+      - 
+      - echo "Zipping extracted files..."
+      - zip -r app.zip ./app-output
   post_build:
     commands:
-      - echo "Logging into AWS ECR..."
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
-
-      - echo "Pushing Docker image to ECR..."
-      - docker push $ECR_REPO:latest
-      - echo "Build and push completed on $(date)"
-
-      - echo "Deploying application files to S3..."
-      - aws s3 cp publish_output s3://staticwerbsite-deploy-codepipeline --recursive --exclude ".git/*" --exclude "buildspec.yml"
+      - echo "Uploading built files to S3..."
+      - aws s3 cp app.zip s3://pull-dockerimage/app.zip
 
 artifacts:
   files:
-    - '**/*'
+    - app.zip
