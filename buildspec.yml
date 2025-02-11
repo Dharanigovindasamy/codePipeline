@@ -1,23 +1,35 @@
 version: 0.2
 
+env:
+  variables:
+    ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
+    IMAGE_TAG: "latest"
+
 phases:
   install:
     runtime-versions:
-      dotnet: 8.0
+      docker: 20
+    commands:
+      - echo "Installing dependencies..."
+      - yum update -y && yum install -y jq awscli docker
+
   pre_build:
     commands:
-      - echo "Logging into AWS ECR..."
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f
+      - echo "Logging into Amazon ECR..."
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
+      - echo "Login successful."
+
   build:
     commands:
       - echo "Building Docker image..."
-      - docker build -t simple-docker-service-0afff1e6c27f .
+      - docker build -t simple-docker-service:latest -f Dockerfile .
+      - echo "Tagging Docker image..."
+      - docker tag simple-docker-service:latest $ECR_REPO:$IMAGE_TAG
+
   post_build:
     commands:
-      - echo "tag image"
-      - docker tag simple-docker-service-0afff1e6c27f:latest 640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f:latest
       - echo "Pushing Docker image to ECR..."
-      - docker push 640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f:latest
+      - docker push $ECR_REPO:$IMAGE_TAG
       - echo "Build and push completed successfully."
 
 artifacts:
