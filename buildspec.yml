@@ -2,30 +2,21 @@ version: 0.2
 
 env:
   variables:
+    APPLICATION_NAME: "ecs-fargate"
     ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
 
 phases:
   install:
     runtime-versions:
       dotnet: 8.0
-    commands:
-      - echo "Installing dependencies..."
-      - dotnet --version
-      - docker --version
-
   pre_build:
     commands:
       - echo "Logging into AWS ECR..."
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
-
   build:
     commands:
       - echo "Building Docker image..."
-      - docker build -t $ECR_REPO:latest -f Dockerfile .
-
-      - echo "Tagging Docker image..."
-      - docker tag $ECR_REPO:latest $ECR_REPO:latest
-
+      - docker build -t $ECR_REPO:latest -f ./Dockerfile .
   post_build:
     commands:
       - echo "Pushing Docker image to ECR..."
