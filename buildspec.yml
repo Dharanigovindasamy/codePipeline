@@ -4,7 +4,7 @@ phases:
   pre_build:
     commands:
       - echo "Installing AWS CLI..."
-      - apt-get update && apt-get install -y awscli  # Only needed for custom images
+      - apt-get update && apt-get install -y awscli 
 
       - echo "Logging into AWS ECR..."
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 640168412115.dkr.ecr.us-east-1.amazonaws.com
@@ -18,7 +18,7 @@ phases:
       - CONTAINER_ID=$(docker create 640168412115.dkr.ecr.us-east-1.amazonaws.com/ecr-rds-repository:latest1)
 
       - echo "Copying files from the container..."
-      - docker cp $CONTAINER_ID:/app ./app-output  # Make sure `/app` is the correct path
+      - docker cp $CONTAINER_ID:/app ./app-output 
 
       - echo "Zipping extracted files..."
       - zip -r app.zip ./app-output
@@ -31,4 +31,4 @@ phases:
 artifacts:
   files:
     - app.zip
-  name: SourceArtifact  # Ensure this matches the CodePipeline artifact name
+  name: SourceArtifact 
