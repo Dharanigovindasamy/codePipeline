@@ -6,10 +6,12 @@ env:
 
 phases:
   install:
+    runtime-versions:
+      dotnet: 8.0
     commands:
-      - echo "Checking Docker version..."
+      - echo "Installing dependencies..."
+      - dotnet --version
       - docker --version
-      - echo "Environment setup complete."
 
   pre_build:
     commands:
@@ -28,7 +30,7 @@ phases:
     commands:
       - echo "Pushing Docker image to ECR..."
       - docker push $ECR_REPO:latest
-      - echo "Build and push completed successfully!"
+      - echo "Build and push completed successfully."
 
 artifacts:
   files:
