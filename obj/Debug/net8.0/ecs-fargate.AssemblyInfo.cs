@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ecs-fargate")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73f790854084c59d4e58c823715e6324eadf57fe")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20811b37ed5bdec087a6e4ba842e060e6a108141")]
 [assembly: System.Reflection.AssemblyProductAttribute("ecs-fargate")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ecs-fargate")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

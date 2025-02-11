@@ -2,51 +2,35 @@ version: 0.2
 
 env:
   variables:
-    APPLICATION_NAME: "ecs-fargate"
     ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
-    DOTNET_VERSION: "8.0"
 
 phases:
   install:
     runtime-versions:
-      dotnet: 8.0
-      nodejs: 14
+      docker: 20
     commands:
-      - echo "Verifying installed .NET SDK and Docker versions..."
-      - dotnet --version
+      - echo "Checking Docker version..."
       - docker --version
       - echo "Environment setup complete."
 
   pre_build:
     commands:
-      - echo "Pre-build started on $(date)"
-      - dotnet nuget locals all --clear  # Clear NuGet cache
-      - dotnet restore ecs-fargate.sln   # Restore dependencies using the solution file
+      - echo "Logging into AWS ECR..."
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
 
   build:
     commands:
-      - echo "Building .NET application..."
-      - dotnet build ecs-fargate.sln --configuration Release
-      - echo "Publishing .NET application..."
-      - dotnet publish ecs-fargate.csproj --configuration Release --output publish_output
-
       - echo "Building Docker image..."
-      - docker build -t $ECR_REPO:latest -f Dockerfile .
+      - docker build -t $ECR_REPO:latest -f ecs-fargate/Dockerfile .
 
       - echo "Tagging Docker image..."
       - docker tag $ECR_REPO:latest $ECR_REPO:latest
 
   post_build:
     commands:
-      - echo "Logging into AWS ECR..."
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
-
       - echo "Pushing Docker image to ECR..."
       - docker push $ECR_REPO:latest
-      - echo "Build and push completed on $(date)"
-
-      - echo "Deploying application files to S3..."
-      - aws s3 cp publish_output s3://staticwerbsite-deploy-codepipeline --recursive --exclude ".git/*" --exclude "buildspec.yml"
+      - echo "Build and push completed successfully!"
 
 artifacts:
   files:

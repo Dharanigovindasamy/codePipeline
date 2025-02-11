@@ -2992,11 +2992,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dharani.govindhasamy\\Desktop\\ecs-fargate\\ecs-fargate.csproj",
+      "projectUniqueName": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\ecs-fargate.csproj",
       "projectName": "ecs-fargate",
-      "projectPath": "C:\\Users\\dharani.govindhasamy\\Desktop\\ecs-fargate\\ecs-fargate.csproj",
+      "projectPath": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\ecs-fargate.csproj",
       "packagesPath": "C:\\Users\\dharani.govindhasamy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dharani.govindhasamy\\Desktop\\ecs-fargate\\obj\\",
+      "outputPath": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dharani.govindhasamy\\AppData\\Roaming\\NuGet\\NuGet.Config",
