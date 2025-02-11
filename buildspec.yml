@@ -1,10 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    APPLICATION_NAME: "ecs-fargate"
-    ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
-
 phases:
   install:
     runtime-versions:
@@ -12,15 +7,17 @@ phases:
   pre_build:
     commands:
       - echo "Logging into AWS ECR..."
-      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f
   build:
     commands:
       - echo "Building Docker image..."
-      - docker build -t $ECR_REPO:latest .
+      - docker build -t simple-docker-service-0afff1e6c27f .
   post_build:
     commands:
+      - echo "tag image"
+      - docker tag simple-docker-service-0afff1e6c27f:latest 640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f:latest
       - echo "Pushing Docker image to ECR..."
-      - docker push $ECR_REPO:latest
+      - docker push 640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f:latest
       - echo "Build and push completed successfully."
 
 artifacts:
