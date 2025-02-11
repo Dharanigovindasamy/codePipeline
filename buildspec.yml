@@ -6,8 +6,6 @@ env:
 
 phases:
   install:
-    runtime-versions:
-      docker: 20
     commands:
       - echo "Checking Docker version..."
       - docker --version
