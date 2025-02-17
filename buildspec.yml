@@ -54,10 +54,8 @@ phases:
       - echo "Logging into Amazon ECR..."
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
       - echo "Retrieving secret from AWS Secrets Manager..."
-      - SECRET_VALUE=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME --query SecretString --output text)
-      - echo "Secret Value Retrieved: $SECRET_VALUE"
+      - export SECRET_VALUE=$(aws secretsmanager get-secret-value --secret-id "$SECRET_NAME" --query SecretString --output text)
       - echo "$SECRET_VALUE" | jq '.' > appsettings.json
-
 
   build:
     commands:
