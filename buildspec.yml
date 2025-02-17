@@ -1,9 +1,47 @@
+# version: 0.2
+
+# env:
+#   variables:
+#     ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
+#     IMAGE_TAG: "latest"
+
+# phases:
+#   install:
+#     commands:
+#       - echo "Installing dependencies..."
+#       - yum update -y && yum install -y jq awscli docker
+
+#   pre_build:
+#     commands:
+#       - echo "Logging into Amazon ECR..."
+#       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
+#       - echo "Login successful."
+
+#   build:
+#     commands:
+#       - echo "Building Docker image..."
+#       - docker build -t simple-docker-service:latest -f Dockerfile .
+#       - echo "Tagging Docker image..."
+#       - docker tag simple-docker-service:latest $ECR_REPO:$IMAGE_TAG
+
+#   post_build:
+#     commands:
+#       - echo "Pushing Docker image to ECR..."
+#       - docker push $ECR_REPO:$IMAGE_TAG
+#       - echo "Build and push completed successfully."
+
+# artifacts:
+#   files:
+#     - '**/*'
+
+
 version: 0.2
-# 
+
 env:
   variables:
     ECR_REPO: "640168412115.dkr.ecr.us-east-1.amazonaws.com/simple-docker-service-0afff1e6c27f"
     IMAGE_TAG: "latest"
+    SECRET_NAME: "MyApp/DatabaseSecret"
 
 phases:
   install:
@@ -15,7 +53,11 @@ phases:
     commands:
       - echo "Logging into Amazon ECR..."
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin $ECR_REPO
-      - echo "Login successful."
+      - echo "Retrieving secret from AWS Secrets Manager..."
+      - SECRET_VALUE=$(aws secretsmanager get-secret-value --secret-id $SECRET_NAME --query SecretString --output text)
+      - echo "Secret Value Retrieved: $SECRET_VALUE"
+      - echo "$SECRET_VALUE" | jq '.' > appsettings.json
+
 
   build:
     commands:
