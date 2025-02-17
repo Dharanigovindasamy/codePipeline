@@ -5,6 +5,37 @@
     {
       "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\buildspec.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:buildspec.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\dbcontext\\homedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:dbcontext\\homedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\ecs-fargate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:ecs-fargate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,11 +45,19 @@
       "DocumentGroups": [
         {
           "DockedHeight": 252,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
@@ -28,18 +67,107 @@
               "RelativeDocumentMoniker": "buildspec.yml",
               "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\buildspec.yml",
               "RelativeToolTip": "buildspec.yml",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAowCUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA4AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-02-11T07:09:41.973Z",
+              "WhenOpened": "2025-02-06T07:20:23.5Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:03:34.365Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-08T11:54:26.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T12:17:12.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Dockerfile",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Dockerfile",
+              "RelativeDocumentMoniker": "Dockerfile",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Dockerfile",
+              "RelativeToolTip": "Dockerfile",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-09T07:19:35.864Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\DbContext\\HomeDbContext.cs",
+              "RelativeDocumentMoniker": "DbContext\\HomeDbContext.cs",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\DbContext\\HomeDbContext.cs",
+              "RelativeToolTip": "DbContext\\HomeDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-08T17:28:20.353Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-09T05:52:45.89Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ecs-fargate.csproj",
+              "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\ecs-fargate.csproj",
+              "RelativeDocumentMoniker": "ecs-fargate.csproj",
+              "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\ecs-fargate.csproj",
+              "RelativeToolTip": "ecs-fargate.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-08T17:41:03.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Microsoft.Common.CurrentVersion.targets",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
+              "ViewState": "AgIAALMUAAAAAAAAAAAawMgUAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
+              "WhenOpened": "2025-01-08T15:40:40.201Z"
             }
           ]
         },

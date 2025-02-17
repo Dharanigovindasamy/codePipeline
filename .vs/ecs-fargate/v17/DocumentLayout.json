@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\buildspec.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:buildspec.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\buildspec.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:buildspec.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|solutionrelative:dockerfile||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A4B807A-48DE-4411-A294-CD321D2DDD94}|ecs-fargate.csproj|c:\\users\\dharani.govindhasamy\\desktop\\pipeline-docker-image\\codepipeline\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -45,7 +45,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 252,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -61,40 +61,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "buildspec.yml",
               "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\buildspec.yml",
               "RelativeDocumentMoniker": "buildspec.yml",
               "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\buildspec.yml",
               "RelativeToolTip": "buildspec.yml",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAqwBMAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-02-06T07:20:23.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "HomeController.cs",
               "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
               "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwBcAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-08T12:03:34.365Z"
+              "WhenOpened": "2025-01-08T12:03:34.365Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
               "ToolTip": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-01-08T11:54:26.054Z"
+              "WhenOpened": "2025-01-08T11:54:26.054Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -110,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Dockerfile",
               "DocumentMoniker": "C:\\Users\\dharani.govindhasamy\\Desktop\\pipeline-docker-image\\codePipeline\\Dockerfile",
               "RelativeDocumentMoniker": "Dockerfile",
